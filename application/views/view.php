@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        <?php echo isset($page_title) ? $page_title : "";?>
+        <?php echo isset($page_title) ? $page_title : ""; ?>
     </title>
 
     <!-- Bootstrap -->
-    <link href="<?=base_url()?>public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= base_url() ?>public/css/bootstrap.min.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
     <script src="<?=base_url()?>public/js/html5shiv.min.js"></script>
@@ -17,14 +17,17 @@
     <![endif]-->
 </head>
 <body>
+    <div class="container">
+        <?php
 
-    <?php
+        $this->load->view('include/navbar');
+
         if (isset($view)) {
             $this->load->view($view);
         }
-    ?>
-
-    <script src="<?=base_url()?>public/js/jquery.min.js"></script>
-    <script src="<?=base_url()?>public/js/bootstrap.min.js"></script>
+        ?>
+    </div>
+<script src="<?= base_url() ?>public/js/jquery.min.js"></script>
+<script src="<?= base_url() ?>public/js/bootstrap.min.js"></script>
 </body>
 </html>
