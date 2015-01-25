@@ -1,2 +1,6 @@
 user_guide/
+.idea/
+.settings/
+.buildpath
+.project
 
