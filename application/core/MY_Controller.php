@@ -12,7 +12,7 @@ class MY_Controller extends CI_Controller
     private function _init()
     {
         if (!$this->settings_model->site_available()) {
-            exit("Site not available now!");
+            $this->load->view('system/not_available');
         }
     }
 }
